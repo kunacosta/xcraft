@@ -26,7 +26,13 @@ class SavedResultsScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
               child: ListTile(
                 title: Text(result.strategyName),
-                subtitle: Text('Trading Pair: ${result.tradingPair}'),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Trading Pair: ${result.tradingPair}'),
+                    Text('Risk per Position: ${(result.risk0 + result.risk1 + result.risk2 + result.risk3) / 4}'),
+                  ],
+                ),
                 onTap: () {
                   _showResultDetails(context, result);
                 },
@@ -77,7 +83,8 @@ class SavedResultsScreen extends StatelessWidget {
           'Longest Win Streak: ${result.longestWinStreak}\n'
           'Win Streak Profit: ${result.winStreakProfit}\n'
           'Longest Lose Streak: ${result.longestLoseStreak}\n'
-          'Lose Streak Loss: ${result.loseStreakLoss}',
+          'Lose Streak Loss: ${result.loseStreakLoss}\n'
+          'Risk per Position: ${(result.risk0 + result.risk1 + result.risk2 + result.risk3) / 4}',
         ),
         actions: [
           TextButton(

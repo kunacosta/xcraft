@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'todo_list.dart'; // Import the TodoList screen
 import 'calculator_screen.dart';
 import 'saved_results_screen.dart';
 
@@ -37,6 +38,17 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const SavedResultsScreen()),
+                );
+              },
+            ),
+            _buildNavigationCard(
+              context,
+              title: 'To-Do List',
+              icon: Icons.list,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const TodoList()), // Navigate to TodoList
                 );
               },
             ),
