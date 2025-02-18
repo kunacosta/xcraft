@@ -22,6 +22,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  mockito: ^5.0.0  # Added mockito for testing
 
   # Linting for code quality
   flutter_lints: ^2.0.0
