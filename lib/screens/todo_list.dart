@@ -170,7 +170,7 @@ class _TodoListState extends State<TodoList> {
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                           child: Text(
-                            priority[0].toUpperCase() + priority.substring(1) + ' Priority',
+                            '${priority[0].toUpperCase()}${priority.substring(1)} Priority',
                             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 166, 167, 169)),
                           ),
                         ),

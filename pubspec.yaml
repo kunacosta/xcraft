@@ -13,7 +13,7 @@ dependencies:
   provider: ^6.0.5
 
   # For local storage
-  shared_preferences: ^2.1.0
+  shared_preferences: ^2.5.1
 
   # Additional dependencies (if needed)
   path: ^1.8.3
