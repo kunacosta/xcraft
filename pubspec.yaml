@@ -1,0 +1,43 @@
+name: xcraft
+description: A  app to calculate trading profits and manage risks.
+version: 1.0.1+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.0.5
+
+  # For local storage
+  shared_preferences: ^2.1.0
+
+  # Additional dependencies (if needed)
+  path: ^1.8.3
+  sqflite: ^2.2.0+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Linting for code quality
+  flutter_lints: ^2.0.0
+
+  # App icon generation
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/images/icon.png
+
+flutter:
+  uses-material-design: true
+
+  # Adding assets
+  assets:
+    - assets/images/xcraft.jpg
+    - assets/images/icon.png
