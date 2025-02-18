@@ -53,14 +53,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 ),
                 onChanged: (value) {
                   int? risk = int.tryParse(value);
-                  if (risk != null && risk >= 1 && risk <= 100) {
+                  if (risk != null) {
                     appState.setRiskPerPosition(risk);
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Please enter a value between 1 and 100.'),
-                      ),
-                    );
                   }
                 },
               ),
@@ -79,16 +73,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   GradientButton(
                     text: 'Calculate',
                     onPressed: () {
-                      final sequence = sequenceController.text;
-                      if (RegExp(r'^[0-3]+$').hasMatch(sequence)) {
-                        appState.calculateTrading(sequence);
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Please enter digits only from 0 to 3.'),
-                          ),
-                        );
-                      }
+                      appState.calculateTrading(sequenceController.text);
                     },
                   ),
                   GradientButton(

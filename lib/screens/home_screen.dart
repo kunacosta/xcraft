@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const TodoList()), // Navigate to TodoList
+                  MaterialPageRoute(builder: (_) => TodoList()), // Navigate to TodoList
                 );
               },
             ),
